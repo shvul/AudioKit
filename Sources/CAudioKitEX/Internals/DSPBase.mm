@@ -180,7 +180,7 @@ void DSPBase::processWithEvents(AudioTimeStamp const *timestamp, AUAudioFrameCou
     // Chceck for parameter updates from the UI.
     for (int index = 0; index < maxParameters; ++index) {
         if (parameters[index]) {
-            parameters[index]->dezipperCheck(std::min(sampleRate * 0.005f, double(100.0f)));
+            parameters[index]->dezipperCheck(std::min(sampleRate * 0.01f, double(200.0f)));
         } else {
             break;
         }
